@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Employee Registration Form</h1>
+
+    <form>
+
+        <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <label>Full Name :</label>
+            <input type="text" name="emp_fullname" required minlength="3" maxlength="50">
+            <br><br>
+
+            <label>Email :</label>
+            <input type="email" name="emp_email" required>
+            <br><br>
+
+            <label>Password :</label>
+            <input type="password"
+                   name="emp_password"
+                   required
+                   minlength="8"
+                   pattern="(?=.*\d)(?=.*[a-zA-Z]).{8,}"
+                   title="Password must be at least 8 characters and include letters and numbers">
+            <br><br>
+
+            <label>Phone Number :</label>
+            <input type="tel"
+                   name="emp_phone"
+                   required
+                   pattern="[0-9]{10}"
+                   title="Enter a 10 digit phone number">
+            <br><br>
+
+            <label>Age :</label>
+            <input type="number"
+                   name="emp_age"
+                   required
+                   min="18"
+                   max="65">
+            <br><br>
+
+            <label>Gender :</label>
+            <input type="radio" name="emp_gender" value="Male" required> Male
+            <input type="radio" name="emp_gender" value="Female" required> Female
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Preference and Extras</legend>
+
+            <label>Upload Resume:label>
+            <input type="file" name="emp_doc" accept="image/*" required>
+            <br><br>
+
+            <label>Search Department/Project :</label>
+            <input type="search" name="emp_search" required>
+            <br><br>
+
+            <label>Experience (Years) :</label>
+            <input type="range" name="emp_experience" min="0" max="40" required>
+            <br><br>
+
+            <label>Portfolio Website :</label>
+            <input type="url"
+                   name="emp_website"
+                   required
+                   pattern="https://.*"
+                   title="URL must start with https://">
+            <br><br>
+
+            <label>Employee Type :</label>
+            <select name="emp_type" required>
+                <option value="">Select</option>
+                <option value="FT">Full-Time</option>
+                <option value="PT">Part-Time</option>
+                <option value="Contract">Contract</option>
+                <option value="Intern">Intern</option>
+            </select>
+
+            <br><br>
+
+            <label>Department :</label>
+
+            <select name="emp_department" required>
+                <optgroup label="Departments">
+                <option value="Software Developer">Software Developer</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+                </optgroup>
+            </select>
+
+            <br><br>
+
+            <label>Preferred Office Location :</label>
+
+            <input list="offices" name="emp_office" required>
+
+            <datalist id="offices">
+                <option>USA</option>
+                <option>UK</option>
+                <option>INDIA</option>
+                <option>JAPAN</option>
+            </datalist>
+
+            <br><br>
+
+            <label>Agree To Company Policy :</label>
+            <input type="checkbox" name="emp_agree" required> I Agree
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Date & Time Info</legend>
+
+            <label>Date of Joining :</label>
+            <input type="date" name="emp_joining_date" required>
+            <br><br>
+
+            <label>Shift Start Time :</label>
+            <input type="time" name="emp_shift_time" required>
+            <br><br>
+
+            <label>Joining Month :</label>
+            <input type="month" name="emp_joining_month" required>
+            <br><br>
+
+            <label>Work Week :</label>
+            <input type="week" name="emp_work_week" required>
+            <br><br>
+
+            <label>Meeting Date & Time :</label>
+            <input type="datetime-local" name="emp_meeting" required>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Form Controls</legend>
+
+            <button type="submit">Submit</button>
+
+            <br><br>
+
+            <input type="image" src="" alt="Company Logo">
+
+            <br><br>
+
+            <input type="reset">
+
+        </fieldset>
+
+    </form>
+
+</body>
+
+</html>
